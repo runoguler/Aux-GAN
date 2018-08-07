@@ -96,7 +96,7 @@ def train(args, train_loader, device, Tensor, LongTensor):
 
 
 def main():
-    epochs = 10
+    epochs = 100
     train_or_display = 0
     lr_g = 0.0002
     lr_d = 0.0002
@@ -104,11 +104,11 @@ def main():
 
     parser = argparse.ArgumentParser(description="Parameters for Training GAN on MNIST dataset")
     parser.add_argument('--batch-size', type=int, default=64, help='batch size for training (default: 64)')
-    parser.add_argument('--num-workers', type=int, default=1, help='number of workers for cuda')
-    parser.add_argument('--lr-g', type=float, default=lr_g, help='learning rate for the generator network')
-    parser.add_argument('--lr-d', type=float, default=lr_d, help='learning rate for the discriminator network')
-    parser.add_argument('--epochs', type=int, default=epochs, help='epoch number to train (default: 10)')
-    parser.add_argument('--train', type=int, default=train_or_display, help='train(1) or display(0) (default: train(1))')
+    parser.add_argument('--num-workers', type=int, default=1, help='number of workers for cuda (default: 1)')
+    parser.add_argument('--lr-g', type=float, default=lr_g, help='learning rate for the generator network (default: 0.0002)')
+    parser.add_argument('--lr-d', type=float, default=lr_d, help='learning rate for the discriminator network (default: 0.0002)')
+    parser.add_argument('--epochs', type=int, default=epochs, help='epoch number to train (default: 100)')
+    parser.add_argument('--train', type=int, default=train_or_display, help='train(1) or display(0) (default: display(0))')
     parser.add_argument('--resume', type=int, default=resume, help='continue training if 1 (default: 0)')
     args = parser.parse_args()
 
