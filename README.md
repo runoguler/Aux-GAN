@@ -51,7 +51,9 @@ Command Line Parameters:
 * --resume: Continue training if non-zero (default: 0)
 
 Examples:
+```
 python gan_mnist.py --epochs 100 --train 1
 python gan_cifar10.py --lr-g 0.0002 --lr-d 0.0002 --epochs 250 --train 1 --resume 1
 python gan_mnist.py --train 0
 python gan_cifar10.py --train 0
+```
