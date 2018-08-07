@@ -20,11 +20,14 @@ Libraries are installed using Anaconda(4.5.8)
 
 ### Running from an IDE (such as PyCharm)
 
+**Run *gan_mnist.py* to generate MNIST data** <br />
+**Run *gan_cifar10.py* to generate CIFAR-10 data** <br />
+
 - Inside *gan_mnist.py* and *gan_cifar10*, there are number of parameters that can be changed: (in main() function)
-  -train_or_display: Display mode if 0, Train mode if otherwise
-  -lr_g, lr_d: Learning rate for Generator and Discriminator
-  -epochs: Number of epochs to train
-  -resume: Train from scratch if 0, resume training if otherwise (Warning: Gives error if there is no saved model file to resume)
+  - train_or_display: Display mode if 0, Train mode if otherwise
+  - lr_g, lr_d: Learning rate for Generator and Discriminator
+  - epochs: Number of epochs to train
+  - resume: Train from scratch if 0, resume training if otherwise (Warning: Gives error if there is no saved model file to resume)
   
 There are 2 different Aux-GAN Neural Network type defined in *aux_gan.py* and *aux_dcgan.py*. It needs to be manually switched inside the code to change the Neural Network type. In order to change it, switch the commented section in the import part of the files *gan_mnist.py* and *gan_cifar10* just like below:
 
@@ -57,3 +60,7 @@ python gan_cifar10.py --lr-g 0.0002 --lr-d 0.0002 --epochs 250 --train 1 --resum
 python gan_mnist.py --train 0
 python gan_cifar10.py --train 0
 ```
+
+## Paper:
+
+https://arxiv.org/pdf/1610.09585.pdf
