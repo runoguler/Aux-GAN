@@ -61,6 +61,11 @@ python gan_mnist.py --train 0
 python gan_cifar10.py --train 0
 ```
 
+### Notes: 
+
+There are model files, that are already trained and ready to use, inside "acgan_models" folder. Files, that have the underscore c (_c) in the name, belong to CIFAR-10 dataset, files, that does not have it, belong to MNIST dataset. The numbers inside the parantheses indicates how many epochs the model is trained. Finally, if the name of the file has "dcnn" in it, it is trained with "aux_dcgan.py" model, if not it is trained with "aux_gan.py" model. If pre-trained model files are used, user should manually switched the comment sections for which model to use, inside the code to prevent errors.
+
+
 ## Paper:
 
 https://arxiv.org/pdf/1610.09585.pdf
