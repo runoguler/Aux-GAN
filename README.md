@@ -63,9 +63,18 @@ python gan_cifar10.py --train 0
 
 ### Notes: 
 
-There are model files, that are already trained and ready to use, inside "acgan_models" folder. Files, that have the underscore c (_c) in the name, belong to CIFAR-10 dataset, files, that does not have it, belong to MNIST dataset. The numbers inside the parantheses indicates how many epochs the model is trained. Finally, if the name of the file has "dcnn" in it, it is trained with "aux_dcgan.py" model, if not it is trained with "aux_gan.py" model. If pre-trained model files are used, user should manually switched the comment sections for which model to use, inside the code to prevent errors.
+There are model files, that are already trained and ready to use, inside "acgan_models/saved" folder. Files, that have the underscore c (_c) in the name, belong to CIFAR-10 dataset, files, that does not have it, belong to MNIST dataset. The numbers inside the parantheses indicates how many epochs the model is trained. Finally, if the name of the file has "dcnn" in it, it is trained with "aux_dcgan.py" model, if not it is trained with "aux_gan.py" model. If pre-trained model files are used, user should manually switched the comment sections for which model to use, inside the code to prevent errors.
 
 
-## Paper:
+Example:
+
+discriminator_c(750dcnn).pth -> Discriminator that is trained with CIFAR-10 dataset for 750 epochs using "aux_dcgan.py" model
+
+For simplification, inside "acgan_models" folder, there are best Generator, Discriminator pair out of all for both MNIST and CIFAR-10 dataset, copied from the saved folder.
+
+generator.pth and discriminator.pth are for MNIST using "aux_gan.py" trained for 500 epochs. <br />
+generator_c.pth and discriminator_c.pth are for CIFAR-10 using "aux_dcgan.py" trained for 750 epochs.
+
+## Reference Paper:
 
 https://arxiv.org/pdf/1610.09585.pdf
